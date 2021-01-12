@@ -1,24 +1,27 @@
-# README
+## Benchmark Ruby-graphql engine in memory
+## Ruby 3
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Rails 6.1 in production mode
 
-Things you may want to cover:
+### How to test
+- Install autocannon tool
+- npm i autocannon -g
 
-* Ruby version
 
-* System dependencies
+### Command
+- autocannon -m 'POST' -b '{ "query": "{ books { title author { name } } }" }' -H "Content-Type: application/json" http://localhost:3000/graphql -c 100
 
-* Configuration
+### Results
 
-* Database creation
+#### Autocannon
+![alt text](https://github.com/LeandroRezendeCoutinho/graphql_web/blob/master/img/Ruby-graphql_benck.png)
 
-* Database initialization
+#### Memory and CPU
+![alt text](https://github.com/LeandroRezendeCoutinho/graphql_web/blob/master/img/CPUMEMRubyBench.png)
 
-* How to run the test suite
+#### CPU
+![alt text](https://github.com/LeandroRezendeCoutinho/graphql_web/blob/master/img/CPUBenchRuby.png)
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Hardware
+- Ryzen 7 2700
+- 16GB DDR4 2933 Mhz
