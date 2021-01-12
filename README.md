@@ -11,7 +11,7 @@
 ### Command
 - autocannon -m 'POST' -b '{ "query": "{ books { title author { name } } }" }' -H "Content-Type: application/json" http://localhost:3000/graphql -c 100
 
-### Results
+### Results Puma(15 workers 5 threads each)
 
 #### Autocannon
 ![alt text](https://github.com/LeandroRezendeCoutinho/graphql_web/blob/master/img/Ruby-graphql_benck.png)
